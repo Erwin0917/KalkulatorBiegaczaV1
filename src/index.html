@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kalkulator biegacza</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Kalkulator biegacza v.1</h1>
+    <main class="wrapper wrapper_800">
+        <article class="speedToPace">
+            <h2>Przelicznik km/h na min/km i odwrotnie</h2>
+            <div class="data__container">
+                <input class="data__input speedToPace__input speedToPace__input_speed " type="text" placeholder="km/h">
+                <span class="icon icon__speed"></span>
+                <input class="data__input data__input_error speedToPace__input speedToPace__input_pace" type="text" placeholder="min/km">
+                <div class="btn__container">
+                    <button name="convert" type="button" data-type="speedToPace">Przelicz</button>
+                </div>
+
+            </div>
+
+        </article>
+
+        <article class="multiCalculator">
+            <h2>Oplicz CZAS, DYSTANS lub TEMP - podaj conajmniej dwie wartości</h2>
+            <div class="data__container">
+                <div class="input__container input__container_pace">
+                    <input type="text" class="data__input data__input_pace" id="ID_input_pace" placeholder="min/km">
+                    <label for="ID_input_pace">Podaj tempo</label>
+                </div>
+                <div class="input__container input__container_time">
+                    <input type="text" class="data__input data__input_time" id="ID_input_time" placeholder="min">
+                    <label for="ID_input_time">Podaj czas (minuty:sekundy)</label>
+                </div>
+                <div class="input__container input__container_distance">
+                    <input type="text" class="data__input data__input_distance" id="ID_input_distance" placeholder="m">
+                    <label for="ID_input_distance">Podaj dystans (w metrach)</label>
+                </div>
+                <div class="btn__container">
+                    <button name="convert" type="button" data-type="multiCalculator">Przelicz</button>
+                </div>
+
+            </div>
+
+        </article>
+
+        <article class="HRmax">
+            <h2>Oblicz swoje tętno maksymalne (HRmax)</h2>
+            <p>Najlepszym sposobem na obliczenie HRM jest specjalistyczne badanie, poniższe wyniki korzystają z popularnych
+                wzorów i nie powinny być traktowane jako idealna wartość.</p>
+
+            <h2>Wybierz sposób obliczania:</h2>
+            <form>
+                <div class="input__container">
+
+                    <label for="JohnMoores">
+                        <input type="radio" name="HR_type" id="JohnMoores" value="JohnMoores">Wzór z John Moores University
+                        <span class="icon  icon__radio"></span>
+                        <div class="desc desc_off">
+                            <p>Wzór jest powszechnie stosowny przez czynnych sportowców. Ponadto odnosi się ona zarówno do sportów
+                                o charakterze areobowym jak i tych, o charakterze anerobowym.</p>
+                        </div>
+                    </label>
+
+
+
+                </div>
+                <div class="input__container">
+
+                    <label for="Tanaki">
+                        <input type="radio" name="HR_type" id="Tanaki" value="Tanaki">Wzór Wg. Tanaki i współpracowników
+                        <span class="icon  icon__radio"></span>
+                        <div class="desc desc_off"> <p>Kobiety: 207,2 – 0,65 x wiek
+                                Mężczyźni : 209,6-0,72 x wiek
+                                Osoby wytrenowane: 205 – 0,6 x wiek
+                                Osoby nietrenujące i rekreacyjnie trenujące: 212 – 0,7 x wiek
+                                We wszystkich powyższych wzorach wiek wyrażamy w latach, a wagę w kilogramach.</p></div>
+                    </label>
+
+                </div>
+                <div class="input__container">
+
+                    <label for="Foxa">
+                        <input type="radio" name="HR_type" id="Foxa" value="Foxa">Wzór wg. Foxa i Haskell'sa
+                        <span class="icon  icon__radio"></span>
+                        <div class="desc desc_off"> <p>Najczęściej spotykamy wzorem jest zaproponowane przez Foxa i Haskell'sa w 1971 roku. Według niego HR max obliczamy w następujący sposób: 220-wiek (w latach). Wzór ten cieszy się dużą popularnością i równie dużym błędem szacunkowym.</p></div>
+                    </label>
+                </div>
+                <div class="input__container">
+
+                    <label for="Sally">
+                        <input type="radio" name="HR_type" id="Sally" value="Sally">Wzór wg. wyczynowej lekkoatletyki Sally Edwards
+                        <span class="icon  icon__radio"></span>
+                        <div class="desc desc_off"> <p> Jednym z najbardziej dokładnych wzorów jest wzór byłej wyczynowej lekkoatletyki Sally Edwards. Błąd obliczenia nie przekracza 5%, tak czy inaczej nawet tak niewielka różnica może wypaczyć dokładne wyznaczenie stref zakresów intensywności.</p></div>
+                    </label>
+                </div>
+            </form>
+            <form class="data__container">
+
+                <input type="text" class="data__input data__input_age" id="age" placeholder="wiek">
+                <input type="text" class="data__input data__input_weight" id="weight" placeholder="waga">
+                <div class="sex__container">
+                    <label for="Woman" class="label__sex">Kobieta
+                        <input type="radio" name="sex" id="Woman">
+                        <span class="icon  icon__woman"></span>
+                    </label>
+                    <label for="Man" class="label__sex">
+                        <input type="radio" name="sex" id="Man" checked>
+                        <span class="icon  icon__man"></span>
+                        Mężczyzna</label>
+                </div>
+
+                <div class="btn__container">
+                    <button name="convert" type="button" data-type="HRmax">Oblicz</button>
+                </div>
+            </form>
+
+        </article>
+    </main>
+
+    <footer class="wrapper wrapper_800">
+        <p class="italic">Wykorzystane wzory na HRmax oraz opisy ze strony <a href="trenerbiegania.pl">trenerbiegania.pl</a></p>
+        <p>Projekt i wykonanie Erwin Heba 2017 </p>
+    </footer>
+
+    <script src="js/general.js"></script>
+    <script src="js/speedToPace.js"></script>
+    <script src="js/multiCalc.js"></script>
+    <script src="js/HRmax.js"></script>
+    <script src="js/init.js"></script>
+</body>
+
+</html>

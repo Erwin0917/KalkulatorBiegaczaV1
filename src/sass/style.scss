@@ -1,0 +1,488 @@
+html{
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f0602;
+}
+body{
+    background-image: url(../img/main_bg.jpg);
+    background-blend-mode: difference;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+}
+input, textarea,select,button{
+    font-family: 'Roboto', sans-serif;
+}
+button{
+    cursor: pointer;
+}
+p{
+    color: black;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+h1{
+    display: inline-block;
+    position: relative;
+    font-size: 4.2rem;
+    color: white;
+    font-weight: normal;
+    padding-left: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        background-image: url(../img/winning-the-race.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 65px;
+        height: 65px;
+        top: -17px;
+        left: 0px;
+        transform: rotateY(180deg);
+    }
+}
+h2,label{
+    font-size: 1.7rem;
+    color: white;
+    font-weight: normal;
+}
+input[type="radio"] + label{
+    cursor: pointer;
+}
+input::placeholder{
+    color: #d1d1d1;
+    font-style: italic;
+    text-align: center;
+}
+
+.wrapper{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba($color: #fff, $alpha: .25);
+
+    &_800{
+        max-width: 800px;
+    }
+
+}
+.data__input{
+    box-sizing: border-box;
+    border: 1px solid white;
+    background: rgba($color: #fff, $alpha: .25);
+    max-height: 39px;
+    color: white;
+    padding: 10px;
+    margin: 10px 50px;
+    font-size: 1.5rem;
+    box-shadow: 3px 3px 8px 3px rgba($color: #000, $alpha: .4);
+    transition: all .3s ease-out;
+    &:focus{
+        box-shadow: 1px 1px 1px 1px rgba($color: #000, $alpha: .4);
+        background: rgba($color: #fff, $alpha: .05);
+        outline: none;
+    }
+}
+.modal__alert{
+    background: white;
+    color: black;
+    text-align: center;
+    position: fixed;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 40px;
+    border: 6px dashed #f7a800;
+    box-shadow: 2px 4px 6px 6px rgba($color: #000, $alpha: .4);
+    transition: all .3s linear;
+    h2{
+        color: black;
+        font-weight: bold;
+        font-size: 2.4rem;
+    }
+    .alert__btn{
+        border: 2px solid #f7a800;
+        background: transparent;
+        padding: 8px 25px;
+        margin-top: 40px;
+        font-size: 1.5rem;
+        transition: all .3s linear;
+        &:hover{
+            background-color: #f7a800;
+
+        }
+    }
+}
+
+main{
+    padding: 20px 35px;
+    h2{
+        margin-bottom: 45px;
+    }
+    article{
+        margin-bottom: 70px;
+    }
+}
+.data__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .btn__container{
+        flex: 1 1 100%;
+        margin-top: 30px;
+        text-align: center;
+        button{
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            background-image: url(../img/btn_BG__lowOpacity.png);
+            background-size: cover;
+            text-shadow: 2px 2px 2px black, 0 0 1px rgba($color: #000, $alpha: .4);
+            box-shadow: 2px 2px 5px 2px rgba($color: #000, $alpha: .5);
+            border: 0;
+            padding: 9px 28px;
+            transition: all .2s linear;
+
+            &:hover{
+                background-image: url(../img/btn_BG.png);
+                box-shadow: 1px 1px 1px 1px rgba($color: #000, $alpha: .4);
+            }
+        }
+    }
+
+}
+.input__container{
+    label{
+        display: block;
+        text-align: center;
+    }
+}
+
+.icon{
+    &::after{
+        content: "";
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 60px;
+        height: 60px;
+    }
+    &__speed{
+        &::after{
+            background-image: url(../img/speed.png);
+        }
+    }
+    &__man::after{
+
+            background-image: url(../img/man.png);
+
+    }
+    &__woman::after{
+            background-image: url(../img/girl.png);
+    }
+    &__circle::after{
+        padding: 5px;
+        border-radius: 50%;
+    }
+
+
+}
+.multiCalculator{
+    .input__container{
+        margin-top: 50px;
+        position: relative;
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 60px;
+            height: 60px;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &_pace::before{
+            background-image: url(../img/speed.png);
+        }
+        &_time::before{
+            background-image: url(../img/hourglass-running.png);
+        }
+        &_distance::before{
+            background-image: url(../img/distance.png);
+        }
+
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translate(-50%, -50%) rotateZ(10deg);;
+            width: 20px;
+            height: 20px;
+            background-image: url(../img/refresh-round-symbol.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        &_distance{
+            &::after{
+                display: none;
+            }
+        }
+    }
+    .input__container{
+        flex-basis: 15%;
+        display: inline-block;
+    }
+}
+
+.HRmax{
+    h2{
+        margin-bottom: 10px;
+    }
+    p{
+        padding-left: 10px;
+        margin-bottom: 15px;
+    }
+    form{
+        margin: 40px 0;
+        margin-top: 10px;
+        .input__container{
+            border: 2px dashed white;
+            margin: 20px 0;
+            padding: 8px 10px;
+
+            label{
+                display: inline-block;
+                position: relative;
+                padding-left: 25px;
+                cursor: pointer;
+            }
+            .desc{
+                padding: 5px 25px;
+
+                p{
+                    margin-bottom: 0;
+                }
+
+                &_off{
+                    display: none;
+                }
+
+            }
+            input[type="radio"]{
+                opacity: 0;
+                position: absolute;
+                &:checked{
+                    &+span::after{
+                        content: '✔';
+                        font-size: 1.4rem;
+                        line-height: 1.4;
+                        color: white;
+                        background: rgba($color: greenyellow, $alpha: .6 );
+                    }
+
+                }
+            }
+            span{
+                position: absolute;
+                left: 0px;
+                top: 0;
+                width: 18px;
+                height: 18px;
+
+                &::after{
+                    width: 18px;
+                    height: 18px;
+                    color: white;
+                    font-size: 1.7rem;
+                    background: rgba($color: #fff, $alpha: .3);
+                    transition: all .3s linear;
+                }
+            }
+            label:hover span::after{
+                background: rgba($color: #fff, $alpha: .8);
+            }
+
+        }
+    }
+    .data__container{
+        align-items: center;
+        input[type="radio"]{
+            opacity: 0;
+            position: absolute;
+        }
+        input[type="radio"]+span{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        input[type="radio"]+span::after{
+            background-size: 24%;
+            top: 0;
+            width: 120px;
+            height: 41px;
+            background-position: center right;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all .2s ease-in;
+
+        }
+        input[type="radio"]:checked+span::after{
+            background-color: rgba($color: #fff, $alpha: .25);
+        }
+        .sex__container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .label__sex{
+            box-sizing: border-box;
+            flex-basis: 100%;
+            max-width: 120px;
+            position: relative;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid rgba($color: #fff, $alpha: .5);
+            border-radius: 8px;
+        }
+    }
+    .HRmax__output{
+        position: relative;
+        display: inline-block;
+        background: white;
+        padding: 15px 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        h2{
+            color: black;
+            margin-bottom: 0;
+
+            span{
+                color: red;
+            }
+        }
+    }
+}
+
+footer.wrapper{
+    margin-top: 20px;
+    background-color: transparent;
+
+    p{
+        text-align: right;
+        color: rgba($color: #fff, $alpha: .75);
+    }
+    a{
+        color: white;
+    }
+}
+
+
+/*  Mobile  */
+
+@media (max-width: 825px){
+
+    .icon{
+
+        &__speed{
+            height: 40px;
+            margin-top: 10px;
+
+            &::after{
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    .speedToPace{
+        input{
+            flex: 1 1 100%;
+        }
+
+    }
+
+    .multiCalculator{
+
+        .input{
+
+            &__container{
+                flex: 1 1 100%;
+                margin: 25px 0;
+                margin-bottom: 45px;
+
+                &::before{
+                    width: 40px;
+                    height: 40px;
+                    top: -34px;
+                }
+
+                &::after{
+                    content: none;
+                }
+
+                input{
+                    display: block;
+                    width: 100%;
+                    margin: 10px 0;
+                    margin-top: 15px;
+
+                }
+            }
+        }
+    }
+
+    .HRmax{
+
+        h2{
+            margin: 10px 0;
+        }
+
+        form{
+            margin-top: 20px;
+        }
+
+        .data{
+
+            &__container{
+
+                .sex__container{
+                    flex-wrap: nowrap;
+                }
+
+                .label__sex{
+                    margin: 15px 30px;
+                    padding-right: 60px;
+                }
+
+                input[type="radio"]+span::after{
+                    background-position: 93% 5px;
+                }
+
+            }
+
+        }
+    }
+
+}
+
+@media (max-width: 400px){
+
+    .HRmax{
+        .data__container{
+            .label__sex{
+                margin: 15px 5px;
+            }
+        }
+    }
+
+}
