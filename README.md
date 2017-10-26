@@ -13,9 +13,9 @@ HTML
 CSS - SASS, BEM
 JS - ES6, Moduły
 
-Narzędzia
+Narzędzia:
 Gulp
 Webpack
 
 
-LIVE: https://erwin0917.github.io/KalkulatorBiegowy/app/index.html
+LIVE: https://erwin0917.github.io/KalkulatorBiegaczaV1/app/index.html
