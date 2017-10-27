@@ -1,3 +1,5 @@
+import general from './general';
+
 /* SpeedToPace */
 const speedToPace = {
 	inputSpeed: document.querySelector(".speedToPace .speedToPace__input_speed"),
@@ -55,3 +57,5 @@ const speedToPace = {
 	}
 
 }
+
+export default speedToPace;

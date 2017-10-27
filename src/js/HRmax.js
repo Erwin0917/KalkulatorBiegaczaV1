@@ -1,3 +1,4 @@
+import general from './general';
 /* HRmax */
 
 const HRmax = {
@@ -14,7 +15,7 @@ const HRmax = {
 
         const desc = document.querySelector(`.HRmax form label[for='${this.id}'] .desc`)
         desc.classList.remove("desc_off");
-
+        console.log("działa")
         HRmax.method = this.id;
     },
 
@@ -63,5 +64,7 @@ const HRmax = {
 // set method
 const HRmethods = document.querySelectorAll(".HRmax form input[name='HR_type']");
 
+// add Listiner for all methods in HRmax module
 HRmethods.forEach( input => input.addEventListener("change", HRmax.setMethod) );
 
+export default HRmax;

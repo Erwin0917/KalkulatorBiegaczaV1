@@ -40,3 +40,5 @@ const general = {
 		return value;
 	}
 }
+
+export default general;
